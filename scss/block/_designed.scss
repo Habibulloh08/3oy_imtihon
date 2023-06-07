@@ -1,0 +1,193 @@
+.designed {
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background-color: black;
+  .container {
+    @include container();
+    .designed-title {
+      h2 {
+        @include h2();
+      }
+    }
+    .designed-block {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      &_card {
+        width: 330px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        &__title {
+          display: flex;
+          justify-content: space-between;
+          h3 {
+            @include h3();
+            color: white;
+            font-size: 35px;
+            line-height: 40px;
+          }
+        }
+        p {
+          @include p();
+        }
+      }
+    }
+    .designed-content {
+      width: 100%;
+      //   border: 1px solid white;
+      gap: 30px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      .design-content_text {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        width: 35%;
+        h2 {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 55.641px;
+          line-height: 68px;
+          text-align: center;
+          color: #ff0000;
+        }
+        h3 {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 88.57%;
+          color: #fff8f8;
+        }
+      }
+      .design-content_subtitle {
+        width: 40%;
+        p {
+          @include p();
+        }
+      }
+    }
+    // content tugadi
+    .designed-btn {
+      width: 498px;
+      height: 58px;
+      margin: auto;
+      margin-top: 50px;
+      background-color: #ff0000;
+      @include display();
+      @include p();
+      cursor: pointer;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .designed {
+    width: 100%;
+    .container {
+      width: 100%;
+      .designed-title {
+        width: 80%;
+
+        h2 {
+          @include h2();
+          line-height: 50px;
+        }
+      }
+      .designed-block {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      .designed-content {
+        width: 100%;
+
+        .design-content_text {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          width: 55%;
+          h2 {
+            font-size: 55.641px;
+            line-height: 68px;
+          }
+        }
+        .design-content_subtitle {
+          width: 45%;
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+      // content tugadi
+      .designed-btn {
+        width: 498px;
+        height: 58px;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .designed {
+    width: 100%;
+    .container {
+      width: 100%;
+      .designed-title {
+        width: 80%;
+
+        h2 {
+          font-size: 33px;
+          line-height: 128.57%;
+        }
+      }
+      .designed-block {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        row-gap: 20px;
+        &_card {
+          width: 100%;
+          p {
+            width: 100%;
+          }
+        }
+      }
+      .designed-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        .design-content_text {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+          width: 55%;
+          h2 {
+            font-size: 55.641px;
+            line-height: 68px;
+          }
+        }
+        .design-content_subtitle {
+          width: 100%;
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+      // content tugadi
+      .designed-btn {
+        width: 70%;
+        height: 58px;
+        margin: auto;
+        margin-top: 25px;
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+.prices {
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  .container {
+    @include container();
+    .prices-list {
+      display: flex;
+      list-style: none;
+      justify-content: space-between;
+      h3 {
+        @include h3();
+      }
+      p {
+        @include p();
+        color: black;
+      }
+      li {
+        width: 379px;
+        height: 449px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: rgba(255, 248, 248, 1);
+        h3 {
+          width: 85%;
+        }
+        p {
+          width: 85%;
+        }
+        .prices-list_btn {
+          width: 85%;
+          height: 50px;
+          background: transparent;
+          border: 1px solid gray;
+          @include p();
+          color: black;
+          @include display();
+          cursor: pointer;
+        }
+      }
+      .prices-list_itm {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .prices {
+    width: 100%;
+    .container {
+      width: 100%;
+      .prices-list {
+        display: grid;
+        grid-template-columns: auto auto;
+        row-gap: 20px;
+        h3 {
+          @include h3();
+        }
+        p {
+          @include p();
+          color: black;
+        }
+        li {
+          width: 337.43px;
+          height: 449px;
+          h3 {
+            width: 85%;
+          }
+          p {
+            width: 85%;
+          }
+          .prices-list_btn {
+            width: 85%;
+            height: 50px;
+          }
+        }
+        .prices-list_itm {
+          display: flex;            
+            align-items:center;
+          img{
+            width: 100%;
+            
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+    .prices {
+      width: 100%;
+      .container {
+        width: 100%;
+        .prices-list {
+          display: flex;
+          flex-direction: column;
+          align-items:center;
+          row-gap: 20px;
+          h3 {
+            @include h3();
+          }
+          p {
+            @include p();
+            color: black;
+          }
+          li {
+            width: 333.43px;
+            height: 449px;
+            h3 {
+              width: 85%;
+            }
+            p {
+              width: 85%;
+            }
+            .prices-list_btn {
+              width: 85%;
+              height: 50px;
+            }
+          }
+          .prices-list_itm {
+            display: none;
+          }
+        }
+      }
+    }
+  }

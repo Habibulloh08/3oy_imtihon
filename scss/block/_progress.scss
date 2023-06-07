@@ -1,0 +1,222 @@
+.progress {
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  .container {
+    @include container();
+    .progress-title {
+      h2 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 61px;
+      }
+    }
+    .progress-block {
+      display: flex;
+      justify-content: space-between;
+      .progress-block_container1 {
+        .progress-block_card1 {
+          width: 50%;
+          position: relative;
+          &__draft {
+            display: flex;
+            align-items: center;
+            h2 {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 900;
+              font-size: 174.14px;
+              line-height: 212px;
+              text-align: center;
+              color: #858585;
+            }
+            h3 {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 35px;
+              line-height: 44px;
+            }
+          }
+          &__img {
+            margin-top: -80px;
+          }
+        }
+      }
+      .progress-block_container2 {
+        width: 50%;
+        position: relative;
+        .progress-block_card1 {
+          width: 50%;
+          margin-top: 200px;
+          position: relative;
+          &__draft {
+            display: flex;
+            align-items: center;
+            h2 {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 900;
+              font-size: 174.14px;
+              line-height: 212px;
+              text-align: center;
+              color: #858585;
+            }
+            h3 {
+              font-family: "Montserrat";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 35.9123px;
+              line-height: 44px;
+            }
+          }
+          &__img {
+            margin-top: -80px;
+          }
+        }
+      }
+      .progress-block_slayd {
+        width: 50%;
+        margin-top: 200px;
+        position: relative;
+        display: none;
+        &__draft {
+          display: flex;
+          align-items: center;
+          h2 {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 900;
+            font-size: 174.14px;
+            line-height: 212px;
+            text-align: center;
+            color: #858585;
+          }
+          h3 {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 35.9123px;
+            line-height: 44px;
+          }
+        }
+        &__img {
+          margin-top: -80px;
+        }
+      }
+    }
+    .progress-button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__btn {
+        margin-top: 100px;
+        width: 422px;
+        height: 58px;
+        background: #ff0000;
+        @include p();
+        @include display();
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .progress {
+    width: 100%;
+    .container {
+      width: 100%;
+      .progress-block {
+        .progress-block_container1 {
+          .progress-block_card1 {
+            &__draft {
+              h2 {
+                font-size: 91.7909px;
+                line-height: 112px;
+              }
+              h3 {
+                font-size: 22px;
+                line-height: 27px;
+              }
+            }
+            &__img {
+              margin-top: -50px;
+              img {
+                width: 287.28px;
+                height: 192.4px;
+              }
+            }
+          }
+        }
+        .progress-block_container2 {
+          width: 50%;
+          position: relative;
+          .progress-block_card1 {
+            width: 50%;
+            margin-top: 50px;
+            position: relative;
+            &__draft {
+              display: flex;
+              align-items: center;
+              h2 {
+                font-size: 91.7909px;
+                line-height: 112px;
+              }
+              h3 {
+                font-size: 22px;
+                line-height: 27px;
+              }
+            }
+            &__img {
+              margin-top: -40px;
+              img {
+                width: 287.28px;
+                height: 192.4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .progress {
+    width: 100%;
+    .container {
+      width: 100%;
+      .progress-block {
+        .progress-block_container1 {
+          display: none;
+        }
+        .progress-block_container2 {
+          display: none;
+        }
+        .progress-block_slayd {
+          display: block;
+          margin: auto;
+          width: 80%;
+          h2 {
+            font-size: 65px;
+            line-height: 79px;
+          }
+          h3 {
+            font-size: 16px;
+            line-height: 130%;
+          }
+          &__img {
+            img {
+              margin-top: 40px;
+              width: 90%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

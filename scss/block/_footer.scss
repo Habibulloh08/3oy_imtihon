@@ -1,0 +1,112 @@
+.footer {
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: black;
+  .container {
+    @include container();
+
+    .footer-block {
+      width: 100%;
+      //   height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &_logo {
+        width: 10%;
+        cursor: pointer;
+        p {
+          font-family: "Tenor Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 18px;
+          text-align: center;
+          text-transform: capitalize;
+          color: #ffffff;
+        }
+      }
+      &_list {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        cursor: pointer;
+        li {
+          font-family: "Tenor Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 18px;
+          text-transform: uppercase;
+          color: #ffffff;
+        }
+      }
+      &_icon {
+        width: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+    .footer-suntitle {
+      @include display();
+      p {
+        @include p();
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    width: 100%;
+    .container {
+      width: 100%;
+      .footer-block {
+        width: 100%;
+
+        &_logo {
+          width: 30%;
+        }
+        &_list {
+          width: 40%;
+        }
+        &_icon {
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    width: 100%;
+    .container {
+      width: 100%;
+      .footer-block {
+        width: 100%;
+        flex-direction: column;
+        row-gap: 30px;
+        &_logo {
+          width: 30%;
+        }
+        &_list {
+          display: none;
+        }
+        &_icon {
+          width: 100%;
+          justify-content: space-around;
+        }
+      }
+      .footer-suntitle {
+        margin-top: 20px;
+        text-align: center;
+        p {
+            width: 60%;
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+}

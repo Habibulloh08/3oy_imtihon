@@ -1,0 +1,117 @@
+.project {
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: black;
+  .container {
+    @include container();
+    .project-title {
+      @include h2();
+      h2 {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 88.57%;
+        color: #ffffff;
+      }
+    }
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 20px;
+      row-gap: 10px;
+      //   grid-template-columns: auto auto;
+      li {
+        img {
+          width: 582px;
+          height: 374px;
+          cursor: pointer;
+        }
+      }
+    }
+    .project-button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 20px;
+
+      .project-button_btn {
+        width: 281px;
+        height: 58px;
+        background: transparent;
+        border: 1px solid gray;
+        @include display();
+        @include p();
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .project {
+    width: 100%;
+    margin-top: 200px;
+    .container {
+      width: 100%;
+      .project-title {
+        h2 {
+          font-size: 50px;
+          line-height: 88.57%;
+        }
+      }
+      .project-list {
+        li {
+          img {
+            width: 340px;
+            height: 220px;
+            cursor: pointer;
+          }
+        }
+      }
+      .project-button {
+        justify-content: center;
+        .project-button_btn {
+          width: 281px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:480px) {
+   
+        .project {
+          width: 100%;
+          margin-top: 200px;
+          .container {
+            width: 100%;
+            .project-title {
+                text-align: center;
+              h2 {
+                font-size: 50px;
+                line-height: 88.57%;
+              }
+            }
+            .project-list {
+                align-items:center;
+                flex-direction: column;
+              li {
+                img {
+                  width: 340px;
+                  height: 220px;
+                  cursor: pointer;
+                }
+              }
+            }
+            .project-button {
+              justify-content: center;
+              .project-button_btn {
+                width: 281px;
+              }
+            }
+          }
+        }
+      }
+      
